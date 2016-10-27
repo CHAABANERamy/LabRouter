@@ -1,5 +1,5 @@
 import { Subscription } from 'rxjs/Subscription';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component} from '@angular/core';
 import { ArtistService } from './artist.service';
 
 @Component({
