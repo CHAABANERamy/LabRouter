@@ -1,6 +1,6 @@
 import { Subscription } from 'rxjs/Subscription';
 import { Component  } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+ 
 import { AlbumService } from './album.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { AlbumService } from './album.service';
 export class AlbumDetailComponent  {
 
   album;
-  paramsSubscription: Subscription;
+ 
 
   constructor( private albumService: AlbumService) { }
 
