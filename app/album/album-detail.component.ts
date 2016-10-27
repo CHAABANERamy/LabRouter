@@ -1,5 +1,5 @@
 import { Subscription } from 'rxjs/Subscription';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AlbumService } from './album.service';
 
@@ -7,22 +7,13 @@ import { AlbumService } from './album.service';
   selector: 'album-detail',
   templateUrl:  '../app/album/album-detail.component.html'
 })
-export class AlbumDetailComponent implements OnInit, OnDestroy {
+export class AlbumDetailComponent  {
 
   album;
   paramsSubscription: Subscription;
 
-  constructor(private route: ActivatedRoute,
-              private albumService: AlbumService) { }
+  constructor( private albumService: AlbumService) { }
 
-  ngOnInit() {
-    this.paramsSubscription = this.route.params.subscribe(params => {
-      this.album = this.albumService.getAlbum(params['albumId']);
-    });
-  }
-
-  ngOnDestroy() {
-    this.paramsSubscription.unsubscribe();
-  }
+   
 
 }
