@@ -11,7 +11,9 @@ export class ArtistDetailComponent implements OnInit, OnDestroy {
   artist;
   paramsSubscription: Subscription;
 
-  constructor(private artistService: ArtistService) { }
+  constructor(private artistService: ArtistService) { 
+    this.artist = this.artistService.getArtist("630662ea-1c7d-4208-99fd-ba3afec20f0c");
+}
 
 
 
