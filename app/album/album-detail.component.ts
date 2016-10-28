@@ -12,7 +12,9 @@ export class AlbumDetailComponent  {
   album;
  
 
-  constructor( private albumService: AlbumService) { }
+  constructor( private albumService: AlbumService) {
+            this.album = this.albumService.getAlbum("72a7d9d5-7fcd-3b37-ae56-4ef1d5abb2f3");
+  }
 
    
 
