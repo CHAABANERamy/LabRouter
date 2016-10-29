@@ -6,7 +6,7 @@ import { ArtistService } from './artist.service';
   selector: 'artist-detail',
    templateUrl:  '../app/artist/artist-detail.component.html'
 })
-export class ArtistDetailComponent implements OnInit, OnDestroy {
+export class ArtistDetailComponent {
 
   artist;
   paramsSubscription: Subscription;
